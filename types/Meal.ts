@@ -4,4 +4,6 @@ export interface Meal {
   slug: string;
   thumbnail: string;
   instructions: string;
+  createdBy: string;
+  createdAt: string;
 }

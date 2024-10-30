@@ -1,6 +1,9 @@
-<script setup>
-// eslint-disable-next-line vue/require-prop-types
-defineProps(["error"]);
+<script setup lang="ts">
+import type { NuxtError } from "#app";
+
+defineProps<{
+  error: NuxtError;
+}>();
 
 const handleError = () => clearError({ redirect: "/" });
 </script>

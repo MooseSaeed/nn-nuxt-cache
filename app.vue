@@ -1,9 +1,7 @@
-<script setup lang="ts"></script>
-
 <template>
   <NuxtLoadingIndicator />
   <NuxtLayout>
-    <ResetButton />
+    <RenameButton />
     <NuxtPage />
   </NuxtLayout>
 </template>

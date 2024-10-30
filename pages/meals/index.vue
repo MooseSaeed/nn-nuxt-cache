@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import type { Meal } from "~/types/Meal";
 
-const { data: cachedData } = useNuxtData("meals");
+const { data: cachedMeals } = useNuxtData("meals");
 
 const { data: meals } = await useFetch<Meal[]>("/api/meals", {
   key: "meals",
-  lazy: !!cachedData.value,
+  lazy: !!cachedMeals.value,
 });
 </script>
 

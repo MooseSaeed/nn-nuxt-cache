@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
-  modules: ["@nuxt/eslint", "@nuxtjs/tailwindcss", "@nuxt/icon", "@pinia/nuxt"],
+  modules: ["@nuxt/eslint", "@nuxtjs/tailwindcss", "@nuxt/icon"],
   tailwindcss: {
     config: {
       theme: {
@@ -14,15 +14,5 @@ export default defineNuxtConfig({
   },
   app: {
     pageTransition: { name: "blur", mode: "out-in" },
-    layoutTransition: { name: "blur", mode: "out-in" },
-    head: {
-      title: "Tasty Meals",
-      meta: [
-        {
-          name: "description",
-          content: "A collection of the best food in the world.",
-        },
-      ],
-    },
   },
 });

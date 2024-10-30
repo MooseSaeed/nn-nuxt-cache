@@ -3,8 +3,8 @@ import type { Meal } from "~/types/Meal";
 
 const { slug } = useRoute().params;
 
-const { data: allMeals } = useNuxtData("meals");
-const cachedMeal = computed(() => allMeals.value?.find((meal: Meal) => meal.slug === slug));
+const { data: cachedMeals } = useNuxtData("meals");
+const cachedMeal = computed(() => cachedMeals.value?.find((meal: Meal) => meal.slug === slug));
 
 const { data: meal } = await useFetch<Meal>(`/api/meals/${slug}`, {
   default: () => cachedMeal.value,
