@@ -34,7 +34,7 @@ defineProps<{
 
             <p
               class="mb-3 font-normal text-gray-700 dark:text-gray-400 truncate text-sm"
-              v-html="meal.instructions"
+              v-html="meal.excerpt"
             ></p>
           </div>
           <NuxtLink
